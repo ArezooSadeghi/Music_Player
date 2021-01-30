@@ -9,13 +9,13 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.example.musicplayer.R;
-import com.example.musicplayer.databinding.FragmentPlayBinding;
+import com.example.musicplayer.databinding.FragmentPlayBackBinding;
 
-public class PlayFragment extends Fragment {
-    private FragmentPlayBinding mBinding;
+public class PlayBackFragment extends Fragment {
+    private FragmentPlayBackBinding mBinding;
 
-    public static PlayFragment newInstance() {
-        PlayFragment fragment = new PlayFragment();
+    public static PlayBackFragment newInstance() {
+        PlayBackFragment fragment = new PlayBackFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -32,7 +32,7 @@ public class PlayFragment extends Fragment {
 
         mBinding = DataBindingUtil.inflate(
                 inflater,
-                R.layout.fragment_play,
+                R.layout.fragment_play_back,
                 container,
                 false);
         return mBinding.getRoot();

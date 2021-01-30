@@ -23,4 +23,9 @@
         android:label="@string/title_album"
         tools:layout="@layout/fragment_album" />
 
+    <fragment
+        android:id="@+id/playbackFragment"
+        android:name="com.example.musicplayer.controller.fragment.PlayBackFragment"
+        android:label="PlaybackFragment" />
+
 </navigation>
