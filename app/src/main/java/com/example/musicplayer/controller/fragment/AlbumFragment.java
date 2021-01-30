@@ -7,17 +7,26 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.example.musicplayer.R;
+import com.example.musicplayer.databinding.FragmentAlbumBinding;
 
 public class AlbumFragment extends Fragment {
+    private FragmentAlbumBinding mBinding;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_album, container, false);
+
+        mBinding = DataBindingUtil.inflate(
+                inflater,
+                R.layout.fragment_album,
+                container,
+                false);
+        return mBinding.getRoot();
     }
 }
